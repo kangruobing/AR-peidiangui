@@ -203,7 +203,31 @@ AR 点击交互管理脚本。
 
 ## 使用流程
 
-### 1. 打开项目
+### 1. 准备 EasyAR 插件包
+
+本项目依赖 EasyAR Sense Unity Plugin。由于插件包较大，仓库中不直接包含安装包，需要先从网盘下载：
+
+```text
+文件名：EasyARSenseUnityPlugin_4002.0.0+4956.1ec38c1ad.7z
+链接：https://pan.baidu.com/s/1KDmPfmc1qkYSqDGH6mNUrg
+提取码：ydit
+```
+
+下载后建议解压到以下路径，使其与 `Packages/manifest.json` 中的本地依赖路径一致：
+
+```text
+D:/EasyARSenseUnityPlugin_4002.0.0+4956.1ec38c1ad/
+```
+
+确认解压后存在类似下面的 Unity 插件包文件：
+
+```text
+D:/EasyARSenseUnityPlugin_4002.0.0+4956.1ec38c1ad/com.easyar.sense-4002.0.0+4956.1ec38c1ad.tgz
+```
+
+如果解压到其他目录，可以在 Unity 打开项目后通过 `Window > Package Manager > + > Add package from tarball...` 手动选择该 `.tgz` 文件，或修改 `Packages/manifest.json` 中 `com.easyar.sense` 对应的本地路径。
+
+### 2. 打开项目
 
 1. 使用 Unity Hub 打开项目目录。
 2. 推荐 Unity 版本：`2022.3.57f1c2`。
@@ -213,7 +237,7 @@ AR 点击交互管理脚本。
 Assets/Peidiangui.unity
 ```
 
-### 2. 运行 AR 识别
+### 3. 运行 AR 识别
 
 1. 点击 Unity 顶部 `Play`。
 2. 允许摄像头访问。
@@ -221,7 +245,7 @@ Assets/Peidiangui.unity
 4. 识别成功后显示 AR 内容。
 5. 点击配电柜虚拟按钮查看说明面板。
 
-### 3. 使用 AI 问答
+### 4. 使用 AI 问答
 
 1. 运行场景。
 2. 点击屏幕左上角搜索框。
@@ -237,7 +261,7 @@ Assets/Peidiangui.unity
 4. 按回车或手机输入法提交。
 5. 回答显示在搜索框下方，可以拖动滚动查看完整内容。
 
-### 4. 配置 DeepSeek
+### 5. 配置 DeepSeek
 
 场景中的 `AI_Search_Manager` 已经预留 DeepSeek 配置：
 
@@ -264,7 +288,7 @@ Unity App -> 自己的后端服务 -> DeepSeek API
 
 这样 DeepSeek Key 不会暴露在 APK 中。
 
-### 5. Android 打包
+### 6. Android 打包
 
 1. Unity Hub 安装 Android Build Support、SDK、NDK、OpenJDK。
 2. 打开 `File > Build Settings`。
