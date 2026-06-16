@@ -205,12 +205,10 @@ AR 点击交互管理脚本。
 
 ### 1. 准备 EasyAR 插件包
 
-本项目依赖 EasyAR Sense Unity Plugin。由于插件包较大，仓库中不直接包含安装包，需要先从网盘下载：
+本项目依赖 EasyAR Sense Unity Plugin。由于插件包涉及授权和商用限制，仓库中不直接包含安装包，也不公开提供下载链接。课程同学请通过课程群或助教私发获取插件包：
 
 ```text
 文件名：EasyARSenseUnityPlugin_4002.0.0+4956.1ec38c1ad.7z
-链接：https://pan.baidu.com/s/1KDmPfmc1qkYSqDGH6mNUrg
-提取码：ydit
 ```
 
 下载后建议解压到以下路径，使其与 `Packages/manifest.json` 中的本地依赖路径一致：
